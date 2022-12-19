@@ -3,7 +3,7 @@
         <header class="flex justify-center gap-20 text-2xl bg-violet-900 text-white py-2">
             <NuxtLink to="/">Home</NuxtLink>
             <NuxtLink to="/dashboard">Dashboard</NuxtLink>
-            <NuxtLink to="/Notes">Notes</NuxtLink>
+            <NuxtLink to="/Notes/add">Notes</NuxtLink>
         </header>
 
         <div class="flex">
