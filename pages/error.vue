@@ -1,6 +1,6 @@
 <template>
     <div>
-        Home
+        404 Error
     </div>
 </template>
 
