@@ -10,10 +10,11 @@ export const useNoteStore = defineStore('store', () => {
         message: string
     }
 
-    const data = ref([
-        { id: 1, subject: 'Book', message: 'Read a Book' },
-        { id: 2, subject: 'Milk', message: 'Buy some Milk' },
+    const data = ref<listData[]>([
+        { id: 1, subject: 'Book', message: "Read 'The sun also rises by Ernest Hemingway'" },
+        { id: 2, subject: 'Presentation', message: 'Continue working on next week’s presentation file' },
         { id: 3, subject: 'Food', message: 'Prepare Food' },
+        { id: 4, subject: 'Update', message: 'Update Apple TV Software'}
     ])
 
     function onAdd() {
