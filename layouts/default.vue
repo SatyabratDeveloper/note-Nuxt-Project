@@ -4,13 +4,15 @@
             <NuxtLink to="/">Home</NuxtLink>
             <NuxtLink to="/dashboard">Dashboard</NuxtLink>
             <NuxtLink to="/Notes/add">Notes</NuxtLink>
+            <NuxtLink to="/Notes/list">List</NuxtLink>
         </header>
 
         <div class="flex">
             <sidebar class="flex flex-col gap-3 bg-slate-200 p-7 h-screen mr-7">
                 <NuxtLink to="/">Home</NuxtLink>
                 <NuxtLink to="/dashboard">Dashboard</NuxtLink>
-                <NuxtLink to="/Notes">Notes</NuxtLink>
+                <NuxtLink to="/Notes/add">Notes</NuxtLink>
+                <NuxtLink to="/Notes/list">List</NuxtLink>
             </sidebar>
 
             <slot></slot>
