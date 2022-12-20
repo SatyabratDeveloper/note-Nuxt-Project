@@ -1,13 +1,6 @@
 <template>
-    <div>
+    <!-- dashboard section -->
+    <div class="mt-7 text-2xl text-violet-900">
         Dashboard
     </div>
 </template>
-
-<script setup lang="ts">
-
-</script>
-
-<style scoped>
-
-</style>

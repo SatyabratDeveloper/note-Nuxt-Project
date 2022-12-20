@@ -1,13 +1,6 @@
 <template>
-    <div>
+    <!-- home page section -->
+    <div class="mt-7 text-2xl text-violet-900">
         Home Page
     </div>
 </template>
-
-<script setup lang="ts">
-
-</script>
-
-<style scoped>
-
-</style>

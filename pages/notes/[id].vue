@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- list of item found in current route -->
         <div class="bg-slate-300 m-7 py-7 px-10 border rounded-md shadow-lg h-fit">
         <ul v-for="item in noteStore.data" :key="item.id">
             <div v-if="item.title.toLowerCase() === routeId">
@@ -12,20 +13,16 @@
 </template>
 
 <script setup lang="ts">
+// importing store
 import { useNoteStore } from '@/store/notesStore'
 const noteStore = useNoteStore()
 
+// useRoute to get route details
 const route = useRoute()
 const routeId = route.params.id
 
-definePageMeta({
-    // middleware: ['auth']
-    
+// defining middleware
+definePageMeta({    
     middleware: process.client ? 'auth' : undefined
 })
-
 </script>
-
-<style scoped>
-
-</style>
