@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 
+// creating store
 export const useNoteStore = defineStore('store', () => {
     // title and message to store input from users
     let title = ref<string>('')
@@ -19,17 +20,18 @@ export const useNoteStore = defineStore('store', () => {
         // { id: 4, title: 'Update', message: 'Update Laptop\'s Windows Software'}
     ])
 
-    const route = useRoute()
+    // getters
+    const noteData = computed(() => data.value)
+    // return the length of data
+    const dataLengthCounter = computed(() => data.value.length > 0)
 
-    // filtering list of correct items as per dynamic route
-    const filteredList = data.value.filter(note => note.title.toLocaleLowerCase() === route.params.id)
-
-    // function to add data
-    function onAdd() {
+    // setters/action
+    // function to add note object to data
+    function addNote() {
         data.value.push({ id: data.value.length, title: title.value, message: message.value })
         message.value = ''
         title.value = ''
     }
-
-    return { title, message, data, onAdd, filteredList }
+    
+    return { title, message, addNote, dataLengthCounter, noteData }
 })
